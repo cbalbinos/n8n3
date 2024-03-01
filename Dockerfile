@@ -1,6 +1,6 @@
 FROM n8nio/n8n:latest
 
-RUN rm -r /home/node/.n8n/nodes
+RUN chmod -R 777 /home/node/.n8n/nodes && rm -r /home/node/.n8n/nodes
 
 ARG PGPASSWORD
 ARG PGHOST
