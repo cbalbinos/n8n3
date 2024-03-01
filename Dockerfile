@@ -1,9 +1,6 @@
 FROM n8nio/n8n:latest
 
-WORKDIR /home/node/.n8n/nodes
-RUN npm install n8n-nodes-chatwoot
-RUN npm install n8n-nodes-text-manipulation
-
+RUN rm -r /home/node/.n8n/nodes
 
 ARG PGPASSWORD
 ARG PGHOST
