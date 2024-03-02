@@ -1,8 +1,8 @@
 FROM n8nio/n8n:latest
 
 USER node
-RUN cd ~/.n8n/nodes && npm i n8n-nodes-chatwoot
-RUN cd ~/.n8n/nodes && npm i n8n-nodes-text-manipulation
+WORKDIR ~/.n8n/nodes && npm i n8n-nodes-chatwoot
+WORKDIR ~/.n8n/nodes && npm i n8n-nodes-text-manipulation
 
 ARG PGPASSWORD
 ARG PGHOST
