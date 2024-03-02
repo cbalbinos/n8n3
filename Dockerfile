@@ -1,8 +1,8 @@
 FROM n8nio/n8n:latest
 
-WORKDIR /home/node/.n8n/nodes
-RUN npm i n8n-nodes-chatwoot
-RUN npm i n8n-nodes-text-manipulation
+RUN mkdir /n8n/volume/node/.n8n/nodes
+WORKDIR /n8n/volume/node/.n8n/nodes
+RUN npm i n8n-nodes-chatwoot n8n-nodes-text-manipulation
 
 ARG PGPASSWORD
 ARG PGHOST
