@@ -1,8 +1,8 @@
 FROM n8nio/n8n:latest
 
-USER root
 RUN mkdir /home/node/.n8n/nodes
 WORKDIR /home/node/.n8n/nodes
+RUN npm install -g npm@latest
 RUN npm i n8n-nodes-chatwoot n8n-nodes-text-manipulation
 
 ARG PGPASSWORD
