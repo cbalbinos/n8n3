@@ -1,5 +1,6 @@
 FROM n8nio/n8n:latest
 
+USER root
 RUN mkdir /home/nodes/.n8n/nodes
 WORKDIR /home/nodes/.n8n/nodes
 RUN npm init -y
