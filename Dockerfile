@@ -1,7 +1,7 @@
 FROM n8nio/n8n:latest
 
 RUN mkdir /home/nodes/.n8n/nodes
-RUN cd /home/nodes/.n8n/nodes
+WORKDIR /home/nodes/.n8n/nodes
 RUN npm i n8n-nodes-chatwoot n8n-nodes-text-manipulation
 
 ARG PGPASSWORD
