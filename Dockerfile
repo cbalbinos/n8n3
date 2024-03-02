@@ -1,8 +1,8 @@
 FROM n8nio/n8n:latest
 
-RUN mkdir ~/.n8n/nodes
-RUN cd ~/.n8n/nodes
-RUN npm update n8n-nodes-chatwoot n8n-nodes-text-manipulation
+WORKDIR /home/node/.n8n/nodes
+RUN npm uninstall n8n-nodes-chatwoot
+RUN npm uninstall n8n-nodes-text-manipulation
 
 ARG PGPASSWORD
 ARG PGHOST
