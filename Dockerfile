@@ -1,7 +1,8 @@
 FROM n8nio/n8n:latest
 
 USER node
-WORKDIR home/nodes/.n8n/nodes
+RUN mkdir ~/.n8n/nodes
+WORKDIR ~/.n8n/nodes
 RUN npm i n8n-nodes-chatwoot
 RUN npm i n8n-nodes-text-manipulation
 
