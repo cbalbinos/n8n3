@@ -1,6 +1,5 @@
 FROM n8nio/n8n:1.44.1
 
-USER node
 RUN mkdir ~/.n8n/nodes
 WORKDIR ~/.n8n/nodes
 RUN npm i n8n-nodes-chatwoot
