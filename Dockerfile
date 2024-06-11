@@ -1,4 +1,4 @@
-FROM n8nio/n8n:1.44.0
+FROM n8nio/n8n:1.44.1
 
 USER node
 RUN mkdir ~/.n8n/nodes
