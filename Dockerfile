@@ -1,4 +1,4 @@
-FROM n8nio/n8n:1.54.0
+FROM n8nio/n8n:1.58.0
 
 RUN mkdir ~/.n8n/nodes
 WORKDIR ~/.n8n/nodes
