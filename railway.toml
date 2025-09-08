@@ -1,4 +1,2 @@
 [deploy]
 startCommand = "n8n start"
-healthcheckPath = "/healthz"
-healthcheckTimeout = 300
