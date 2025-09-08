@@ -4,6 +4,9 @@ FROM n8nio/n8n:1.109.2
 RUN mkdir -p /home/node/.n8n/nodes
 WORKDIR /home/node/.n8n/nodes
 
+# limpar possíveis pacotes duplicados ao iniciar
+RUN rm -rf /home/node/.n8n/nodes/node_modules/n8n-nodes-evolution-api || true
+
 # variáveis do banco
 ARG PGPASSWORD
 ARG PGHOST
