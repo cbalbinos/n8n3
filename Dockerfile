@@ -31,4 +31,4 @@ ENV GENERIC_TIMEZONE=America/Sao_Paulo
 ENV N8N_LOG_LEVEL=info
 
 # Inicialização do Editor
-CMD ["n8n", "start", "--tunnel"]
+CMD ["n8n", "start", "--port", "5678"]
