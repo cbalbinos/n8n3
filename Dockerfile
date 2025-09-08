@@ -1,8 +1,10 @@
 FROM n8nio/n8n:1.109.2
 
-RUN mkdir ~/.n8n/nodes
-WORKDIR ~/.n8n/nodes
+# nodes customizados
+RUN mkdir -p /home/node/.n8n/nodes
+WORKDIR /home/node/.n8n/nodes
 
+# variáveis do banco
 ARG PGPASSWORD
 ARG PGHOST
 ARG PGPORT
@@ -16,9 +18,12 @@ ENV DB_POSTGRESDB_PORT=$PGPORT
 ENV DB_POSTGRESDB_USER=$PGUSER
 ENV DB_POSTGRESDB_PASSWORD=$PGPASSWORD
 
-
+# encryption key
 ARG ENCRYPTION_KEY
-
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 
+# rodar como root para conseguir escrever no volume do Railway
+USER root
+
 CMD ["n8n", "start"]
+
