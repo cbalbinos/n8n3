@@ -1,4 +1,4 @@
-FROM n8nio/n8n:1.109.2
+FROM n8nio/n8n:1.110.1
 
 # nodes customizados
 RUN mkdir -p /home/node/.n8n/nodes
