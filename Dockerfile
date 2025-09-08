@@ -25,5 +25,6 @@ ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 # rodar como root para conseguir escrever no volume do Railway
 USER root
 
-CMD ["n8n", "start"]
+ENV N8N_TRUSTED_PROXIES="0.0.0.0/0"
 
+CMD ["n8n", "start"]
