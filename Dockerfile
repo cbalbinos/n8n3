@@ -7,6 +7,9 @@ WORKDIR /home/node/.n8n/nodes
 # Limpar possíveis pacotes duplicados ao iniciar
 RUN rm -rf /home/node/.n8n/nodes/node_modules/n8n-nodes-evolution-api || true
 
+# Instalar o pacote community node globalmente
+RUN npm install -g n8n-nodes-evolution-api
+
 # Rodar como root para conseguir escrever no volume do Railway
 USER root
 
