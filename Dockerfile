@@ -9,6 +9,9 @@ WORKDIR /home/node/.n8n/nodes
 # limpar possíveis pacotes duplicados ao iniciar
 RUN rm -rf /home/node/.n8n/nodes/node_modules/n8n-nodes-evolution-api || true
 
+# instalar o pacote globalmente
+RUN npm install -g n8n-nodes-evolution-api
+
 
 # variáveis do banco
 ARG PGPASSWORD
