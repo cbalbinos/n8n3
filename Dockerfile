@@ -1,4 +1,4 @@
-FROM n8nio/n8n:1.123.9
+FROM n8nio/n8n:1.123.11
 
 
 # nodes customizados
