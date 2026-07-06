@@ -1,4 +1,4 @@
-FROM n8nio/n8n:1.123.26
+FROM n8nio/n8n:1.123.63
 
 # user folder
 ENV N8N_USER_FOLDER=/n8n
